@@ -1,11 +1,11 @@
-package com.github.yuri0x7c1.vaadin.addon.bscard;
+package org.vaadin.addons.yuri0x7c1.bscard;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 
-@Tag("bs-card-footer")
-@JsModule("./card/bs-card-footer.js")
-public class BsCardFooter extends Component implements HasComponents {
+@Tag("bs-card-img")
+@JsModule("./card/bs-card-img.js")
+public class BsCardImg extends Component implements HasComponents {
 }

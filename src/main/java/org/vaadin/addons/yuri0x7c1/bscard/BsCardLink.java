@@ -1,4 +1,4 @@
-package com.github.yuri0x7c1.vaadin.addon.bscard;
+package org.vaadin.addons.yuri0x7c1.bscard;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;

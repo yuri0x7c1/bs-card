@@ -1,4 +1,6 @@
-package com.github.yuri0x7c1.vaadin.addon.bscard;
+package org.vaadin.addons.yuri0x7c1.bscard;
+
+import org.vaadin.addons.yuri0x7c1.bscard.BsCard;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H5;
