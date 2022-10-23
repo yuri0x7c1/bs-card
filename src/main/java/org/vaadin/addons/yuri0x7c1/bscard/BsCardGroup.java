@@ -7,6 +7,6 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 
 @Tag("bs-card-group")
-@JsModule("./card/bs-card-group.js")
+@JsModule("./bs-card/bs-card-group.js")
 public class BsCardGroup extends Component implements HasComponents, HasSize {
 }

@@ -6,7 +6,7 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 
 @Tag("bs-card-body")
-@JsModule("./card/bs-card-body.js")
+@JsModule("./bs-card/bs-card-body.js")
 public class BsCardBody extends Component implements HasComponents {
 	public void addToTitle(Component c) {
 		c.getElement().setAttribute("slot", "card-title");

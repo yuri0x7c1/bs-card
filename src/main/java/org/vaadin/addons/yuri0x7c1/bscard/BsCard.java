@@ -7,7 +7,7 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 
 @Tag("bs-card")
-@JsModule("./card/bs-card.js")
+@JsModule("./bs-card/bs-card.js")
 public class BsCard extends Component implements HasComponents, HasSize {
 	private final BsCardImg topImage = new BsCardImg();
 	private final BsCardHeader header = new BsCardHeader();

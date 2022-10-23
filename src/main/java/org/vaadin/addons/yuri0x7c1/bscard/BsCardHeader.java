@@ -6,6 +6,6 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 
 @Tag("bs-card-header")
-@JsModule("./card/bs-card-header.js")
+@JsModule("./bs-card/bs-card-header.js")
 public class BsCardHeader extends Component implements HasComponents {
 }
