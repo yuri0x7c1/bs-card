@@ -6,6 +6,11 @@ import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 
+/**
+ *
+ * @author yuri0x7c1
+ *
+ */
 @Tag("bs-card")
 @JsModule("./bs-card/bs-card.js")
 public class BsCard extends Component implements HasComponents, HasSize {
@@ -43,75 +48,115 @@ public class BsCard extends Component implements HasComponents, HasSize {
 		body.remove(components);
 	}
 
-	public void addToTopImage(Component c) {
+	public void addTopImageComponent(Component c) {
 		topImage.add(c);
 		topImage.setVisible(true);
 	}
 
-	public void removeFromTopImage(Component c) {
+	public void removeTopImageComponent(Component c) {
 		topImage.remove(c);
 		if (topImage.getChildren().count() == 0) {
 			topImage.setVisible(false);
 		}
 	}
 
-	public void addToHeader(Component c) {
+	public void addHeaderComponent(Component c) {
 		header.add(c);
 		header.setVisible(true);
 	}
 
-	public void removeFromHeader(Component c) {
+	public void removeHeaderComponent(Component c) {
 		header.remove(c);
 		if (header.getChildren().count() == 0) {
 			header.setVisible(false);
 		}
 	}
 
-	public void addToTitle(Component c) {
-		body.addToTitle(c);
+	public void addTitleComponent(Component c) {
+		body.addTitleComponent(c);
 	}
 
-	public void removeFromTitle(Component c) {
-		body.removeFromTitle(c);
+	public void removeTitleComponent(Component c) {
+		body.removeTitleComponent(c);
 	}
 
-	public void addToSubtitle(Component c) {
-		body.addToSubtitle(c);
+	public void addSubtitleComponent(Component c) {
+		body.addSubtitleComponent(c);
 	}
 
-	public void removeFromSubtitle(Component c) {
-		body.removeFromSubtitle(c);
+	public void removeSubtitleComponent(Component c) {
+		body.removeSubtitleComponent(c);
 	}
 
-	public void addToText(Component c) {
-		body.addToText(c);
+	public void addTextComponent(Component c) {
+		body.addTextComponent(c);
 	}
 
-	public void removeFromText(Component c) {
-		body.removeFromText(c);
+	public void removeTextComponent(Component c) {
+		body.removeTextComponent(c);
 	}
 
-	public void addToFooter(Component c) {
+	public void addFooterComponent(Component c) {
 		footer.add(c);
 		footer.setVisible(true);
 	}
 
-	public void removeFromFooter(Component c) {
+	public void removeFooterComponent(Component c) {
 		footer.remove(c);
 		if (footer.getChildren().count() == 0) {
 			footer.setVisible(false);
 		}
 	}
 
-	public void addToBottomImage(Component c) {
+	public void addBottomImageComponent(Component c) {
 		bottomImage.add(c);
 		bottomImage.setVisible(true);
 	}
 
-	public void removeFromBottomImage(Component c) {
+	public void removeBottomImageComponent(Component c) {
 		bottomImage.remove(c);
 		if (bottomImage.getChildren().count() == 0) {
 			bottomImage.setVisible(false);
 		}
+	}
+
+	public BsCard withComponents(Component...components) {
+		add(components);
+		return this;
+	}
+
+	public BsCard withTopImageComponent(Component c) {
+		addTopImageComponent(c);
+		return this;
+	}
+
+	public BsCard withHeaderComponent(Component c) {
+		addHeaderComponent(c);
+		return this;
+	}
+
+	public BsCard withTitleComponent(Component c) {
+		addTitleComponent(c);
+		return this;
+	}
+
+	public BsCard withSubtitleComponent(Component c) {
+		addSubtitleComponent(c);
+		return this;
+	}
+
+	public BsCard withTextComponent(Component c) {
+		addTextComponent(c);
+		return this;
+	}
+
+	public BsCard withFooterComponent(Component c) {
+		addFooterComponent(c);
+		return this;
+	}
+
+	public BsCard withBottomImageComponent(Component c) {
+		withBottomImageComponent(c);
+		return this;
 	}
 }

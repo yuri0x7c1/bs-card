@@ -18,11 +18,11 @@ public class ExampleView extends VerticalLayout {
     public ExampleView() {
     	BsCard card = new BsCard();
     	card.setWidth("600px");
-    	card.addToTopImage(new Image("https://via.placeholder.com/600x200", "600x200"));
-    	card.addToHeader(new HorizontalLayout(new Paragraph("Header"), new Button("Click Me!")));
-    	card.addToTitle(new H5("Card Title"));
-    	card.addToSubtitle(new H6("Card Subtitle"));
-    	card.addToText(new Paragraph("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis tristique libero, "
+    	card.addTopImageComponent(new Image("https://via.placeholder.com/600x200", "600x200"));
+    	card.addHeaderComponent(new HorizontalLayout(new Paragraph("Header"), new Button("Click Me!")));
+    	card.addTitleComponent(new H5("Card Title"));
+    	card.addSubtitleComponent(new H6("Card Subtitle"));
+    	card.addTextComponent(new Paragraph("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis tristique libero, "
     			+ "sit amet auctor eros tempus ac. Mauris justo sapien, aliquet a varius eu, elementum eget urna. Donec maximus "
     			+ "finibus ullamcorper. Nunc eu cursus justo. Aliquam cursus sem ut eros ullamcorper, eget varius felis tincidunt. "
     			+ "Phasellus placerat felis et leo efficitur eleifend. Sed a lectus erat. Etiam eget iaculis erat. Morbi quis "
@@ -30,8 +30,8 @@ public class ExampleView extends VerticalLayout {
     			+ "eget gravida rhoncus, eros est elementum dui, et efficitur est libero id leo. Nunc sed ornare erat. Duis felis "
     			+ "lectus, tincidunt vitae est convallis, suscipit lacinia ex."));
     	card.add(new Button("Click Me!"));
-    	card.addToFooter(new HorizontalLayout(new Paragraph("Footer"), new Button("Click Me!")));
-    	card.addToBottomImage(new Image(" https://via.placeholder.com/600x200", "600x200"));
+    	card.addFooterComponent(new HorizontalLayout(new Paragraph("Footer"), new Button("Click Me!")));
+    	card.addBottomImageComponent(new Image(" https://via.placeholder.com/600x200", "600x200"));
     	add(card);
     }
 }
