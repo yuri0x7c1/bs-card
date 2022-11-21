@@ -16,6 +16,18 @@
 
 package org.vaadin.addons.yuri0x7c1.bscard;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.imageio.ImageIO;
+
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.html.H6;
@@ -24,6 +36,8 @@ import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.InputStreamFactory;
+import com.vaadin.flow.server.StreamResource;
 
 /** Test view for manual and automated testing of the component.
  *
@@ -31,10 +45,48 @@ import com.vaadin.flow.router.Route;
 @Route("")
 public class ExampleView extends VerticalLayout {
 
+	private static final String _600X200 = "600x200";
+
+	public class MyImageStreamFactory implements InputStreamFactory {
+	    ByteArrayOutputStream imagebuffer = null;
+
+	    // This method generates the stream contents
+	    public InputStream createInputStream () {
+	        // Create an image
+	        BufferedImage image = new BufferedImage (600, 200,
+	                                  BufferedImage.TYPE_INT_RGB);
+	        Graphics2D drawable = image.createGraphics();
+
+	        // fill background
+	        drawable.setStroke(new BasicStroke(5));
+	        drawable.setColor(Color.GRAY);
+	        drawable.fillRect(0, 0, 600, 200);
+
+	        // draw text
+	        drawable.setColor(Color.BLACK);
+	        drawable.setFont(new Font("Montserrat",
+	                                  Font.PLAIN, 48));
+	        drawable.drawString(_600X200, 175, 120);
+	        try {
+	            // Write the image to a buffer
+	            imagebuffer = new ByteArrayOutputStream();
+	            ImageIO.write(image, "png", imagebuffer);
+
+	            // Return a stream from the buffer
+	            return new ByteArrayInputStream(
+	                imagebuffer.toByteArray());
+	        } catch (IOException e) {
+	            return null;
+	        }
+	    }
+	}
+
     public ExampleView() {
+    	StreamResource imageResource = new StreamResource(_600X200, new MyImageStreamFactory());
+
     	BsCard card = new BsCard();
     	card.setWidth("600px");
-    	card.addTopImageComponent(new Image("https://via.placeholder.com/600x200", "600x200"));
+    	card.addTopImageComponent(new Image(imageResource, _600X200));
     	card.addHeaderComponent(new HorizontalLayout(new Paragraph("Header"), new Button("Click Me!")));
     	card.addTitleComponent(new H5("Card Title"));
     	card.addSubtitleComponent(new H6("Card Subtitle"));
@@ -47,7 +99,7 @@ public class ExampleView extends VerticalLayout {
     			+ "lectus, tincidunt vitae est convallis, suscipit lacinia ex."));
     	card.add(new Button("Click Me!"));
     	card.addFooterComponent(new HorizontalLayout(new Paragraph("Footer"), new Button("Click Me!")));
-    	card.addBottomImageComponent(new Image(" https://via.placeholder.com/600x200", "600x200"));
+    	card.addBottomImageComponent(new Image(imageResource, _600X200));
     	add(card);
     }
 }
