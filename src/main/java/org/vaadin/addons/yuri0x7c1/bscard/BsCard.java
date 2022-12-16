@@ -19,6 +19,7 @@ package org.vaadin.addons.yuri0x7c1.bscard;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.HasSize;
+import com.vaadin.flow.component.HasStyle;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 
@@ -29,7 +30,7 @@ import com.vaadin.flow.component.dependency.JsModule;
  */
 @Tag("bs-card")
 @JsModule("./bs-card/bs-card.js")
-public class BsCard extends Component implements HasComponents, HasSize {
+public class BsCard extends Component implements HasComponents, HasSize, HasStyle {
 	private final BsCardImg topImage = new BsCardImg();
 	private final BsCardHeader header = new BsCardHeader();
 	private final BsCardBody body = new BsCardBody();
