@@ -1,7 +1,6 @@
 
 import { LitElement, html } from 'lit-element';
 import { BsCardLinkCss } from './bs-card-link.css.js';
-import { BsContentRebootCss } from './content/bs-content-reboot.css.js';
 
 export class BsCardLink extends LitElement {
 
@@ -14,7 +13,6 @@ export class BsCardLink extends LitElement {
 
     static get styles() {
         return [
-            BsContentRebootCss,
             BsCardLinkCss
         ];
     }

@@ -3,14 +3,12 @@ import { LitElement, html } from 'lit-element';
 import { BsCardCss } from './bs-card.css.js';
 import { BsTextCss } from './utilities/bs-text.css.js';
 import { BsSizingCss } from './utilities/bs-sizing.css.js';
-import { BsContentRebootCss } from './content/bs-content-reboot.css.js';
 import { configureFlushListGroupBorders } from './helper/bs-card-list-group-helper.js';
 
 export class BsCard extends LitElement {
 
     static get styles() {
         return [
-            BsContentRebootCss,
             BsSizingCss,
             BsTextCss,
             BsCardCss

@@ -2,13 +2,11 @@
 import { LitElement, html } from 'lit-element';
 import { configureCardLinks } from './helper/bs-card-links-helper.js';
 import { BsCardLinksCss } from './bs-card-links.css.js';
-import { BsContentRebootCss } from './content/bs-content-reboot.css.js';
 
 export class BsCardLinks extends LitElement {
 
     static get styles() {
         return [
-            BsContentRebootCss,
             BsCardLinksCss
         ];
     }

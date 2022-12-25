@@ -1,13 +1,11 @@
 
 import { LitElement, html } from 'lit-element';
 import { BsCardDeckCss } from './bs-card-deck.css.js';
-import { BsContentRebootCss } from './content/bs-content-reboot.css.js';
 
 export class BsCardDeck extends LitElement {
 
     static get styles() {
         return [
-            BsContentRebootCss,
             BsCardDeckCss
         ];
     }
