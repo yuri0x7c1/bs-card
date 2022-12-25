@@ -7,8 +7,6 @@ export class BsCard extends LitElement {
 
     static get styles() {
         return [
-            BsSizingCss,
-            BsTextCss,
             BsCardCss
         ];
     }
