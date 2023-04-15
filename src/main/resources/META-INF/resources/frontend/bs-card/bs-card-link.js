@@ -1,5 +1,5 @@
 
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from 'lit';
 import { BsCardLinkCss } from './bs-card-link.css.js';
 
 export class BsCardLink extends LitElement {

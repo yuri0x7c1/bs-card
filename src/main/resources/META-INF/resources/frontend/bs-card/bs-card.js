@@ -1,5 +1,5 @@
 
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from 'lit';
 import { BsCardCss } from './bs-card.css.js';
 import { configureFlushListGroupBorders } from './helper/bs-card-list-group-helper.js';
 

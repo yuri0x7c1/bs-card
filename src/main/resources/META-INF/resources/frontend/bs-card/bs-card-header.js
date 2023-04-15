@@ -1,5 +1,5 @@
 
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from 'lit';
 import { BsCardHeaderCss } from './bs-card-header.css.js';
 
 export class BsCardHeader extends LitElement {

@@ -1,5 +1,5 @@
 
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from 'lit';
 import { BsCardColumnsCss } from './bs-card-columns.css.js';
 
 export class BsCardColumns extends LitElement {
