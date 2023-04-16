@@ -5,7 +5,7 @@ export const BsCardBodyCss = css`
 
     :host {
         flex: 1 1 auto;
-        padding: 1.25rem;
+        padding: var(--lumo-space-m);
         display: block;
     }
 
